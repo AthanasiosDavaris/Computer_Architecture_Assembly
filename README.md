@@ -1,44 +1,30 @@
-# Low-Level Systems Architecture
+# Computer Organization & Assembly Projects
 
-This repository serves as the foundation of my journey toward **Software Architecture**. Before mastering high-level distributed systems and DevOps, I chose to master the "metal"—understanding how data moves through registers, how memory is physically addressed, and how to optimize logic at the instruction level.
+I built this collection of Assembly programs to deepen my understanding of how software interacts with hardware.
 
-## Architectural Objectives
+While my primary focus is **Fullstack Development**, I believe that understanding memory management and processor logic at the low level helps write more efficient high-level code.
 
-In these projects, I focused on three core pillars of systems engineering:
+## What I Learned
 
-1. **Resource Efficiency:** Maximizing register reuse to minimize memory latency.
-2. **Deterministic Logic:** Handling complex branching (Quadratic roots) and overflow protection in a low-level environment.
-3. **Memory Mapping:** Manually calculating offsets for multi-dimensional data structures (Matrices).
+These projects focus on the fundamentals of computing:
 
-## Project Highlights
+- **Memory Management:** Manually calculating memory offsets for 2D arrays (Matrices).
+- **Optimization:** Reducing instruction counts by managing register allocation efficiently.
+- **Control Flow:** Implementing complex logic (loops, branching, error handling) without high-level abstractions.
 
-### 1. Register & Logic Optimization
+## Project Overview
 
-- **File:** `register_allocation_optimization.asm`
-- **Concept:** Implemented a complex mathematical expression by strategically reusing registers.
-- **Architectural Parallel:** This mirrors **In-Memory Caching**-keeping data as close to the "execution engine" as possible to avoid the cost of external fetches.
+### 1. Algorithms & Logic
 
-### 2. Memory Architecture & Matrix Engines
+- **Quadratic Equation Solver:** A program that calculates roots for quadratic equations, handling real and complex numbers. It demonstrates how to manage floating-point operations and conditional branching at the hardware level.
+- **Register Optimization:** An implementation of complex arithmetic expressions designed to minimize memory access by maximizing register reuse.
 
-- **Files:** `matrix-offset-calculation.asm`, `2d-array-average.asm`
-- **Concept:** Developed manual address calculation logic to traverse 4x4 matrices.
-- **Architectural Parallel:** Understanding how databases handle **Physical Storage and Indexing**. By calculating `base_address + (row * row_size + col) * element_size`, I gained a deep understanding of data alignment.
+### 2. Memory & Data Structures
 
-### 3. Procedural Logic & FPU Operations
+- **Matrix Traversal:** Programs that access specific elements in a 4x4 matrix using direct memory addressing.
+- **Array Statistics:** A tool to calculate sums and averages of integer arrays, featuring overflow protection logic.
 
-- **File:** `quadratic-solver.asm`
-- **Concept:** A robust solver for real and complex roots, managing the stack and branching logic.
-- **Architectural Parallel:** Demonstrates **Error Handling and Branch Prediction** logic at the most granular level.
+## 🛠 Tech Stack
 
-## Logic Flow (Quadratic Solver)
-
-```mermaid
-graph TD
-    A[Input Coefficients] --> B{Calculate Discriminant}
-    B -- D > 0 --> C[Two Real Roots]
-    B -- D = 0 --> D[One Real Root]
-    B -- D < 0 --> E[Complex Roots]
-    C --> F[Display Results]
-    D --> F
-    E --> F
-```
+- **Language:** Assembly (MIPS/x86)
+- **Concepts:** ALU Operations, Stack Management, Memory Addressing, Binary Arithmetic.
