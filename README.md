@@ -24,7 +24,7 @@ These projects focus on the fundamentals of computing:
 - **Matrix Traversal:** Programs that access specific elements in a 4x4 matrix using direct memory addressing.
 - **Array Statistics:** A tool to calculate sums and averages of integer arrays, featuring overflow protection logic.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Language:** Assembly (MIPS/x86)
 - **Concepts:** ALU Operations, Stack Management, Memory Addressing, Binary Arithmetic.
